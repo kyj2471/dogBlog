@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BUTTON> test every button 1`] = `
+<button
+  class="globalStyles__MainEngineButton-twski7-0 eylqge"
+>
+  text
+</button>
+`;

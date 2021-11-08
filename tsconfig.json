@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "__test__/atomsTest/Loading.test.js",
+    "public/firebase-messaging-sw.js",
+    "firebase/firebase.tsx",
+    "firebase/firebase-messaging-sw.js",
+    "firebase/firebase-messaging-sw.js",
+    "data.js",
+    "introduce.js"
+  ],
+  "exclude": ["node_modules"]
+}
