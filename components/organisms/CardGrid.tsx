@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
-import Card from '../molecules/Card';
-import Link from 'next/link';
-import Toggle from '../molecules/Toggle';
-import * as TYPE from '../../interface/index';
-import * as S from '../../styles/globalStyles';
+import React, { memo } from "react";
+import Card from "../molecules/Card";
+import Link from "next/link";
+import Toggle from "../molecules/Toggle";
+import * as TYPE from "../../interface/index";
+import * as S from "../../styles/globalStyles";
 
 interface CardGridProps {
   handleEnroll: (id: string) => void;
@@ -21,12 +21,6 @@ const CardGrid = memo(
     }
     const isCard = card.length > 3;
 
-    // Fix => 분리 하기 isCard / card.length === 1 인경우 나누기
-    // const renderA = () => {
-    //   if(){
-    //     return
-    //   }
-    // }
     return (
       <S.GridMainCard>
         {isCard ? (
@@ -43,8 +37,8 @@ const CardGrid = memo(
                       height={100}
                     />
                     <Toggle
-                      src1={'/yellowstar.png'}
-                      src2={'/star.png'}
+                      src1={"/yellowstar.png"}
+                      src2={"/star.png"}
                       handleEnroll={handleEnroll}
                       handleCancel={handleCancel}
                       id={item.image.id}
