@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
-import Link from 'next/link';
-import Heading from '../atoms/Heading';
-import styled from 'styled-components';
+import React, { memo } from "react";
+import Link from "next/link";
+import Heading from "../atoms/Heading";
+import styled from "styled-components";
 
 const Header = memo(() => (
   <HeaderWrapper>
@@ -24,7 +24,6 @@ const Header = memo(() => (
 ));
 export default Header;
 
-//네이밍 규칙
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-around;

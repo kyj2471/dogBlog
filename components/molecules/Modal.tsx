@@ -1,11 +1,10 @@
-import React, { memo } from 'react';
-import Heading from '../atoms/Heading';
-import Button from '../atoms/Button';
-import Card from './Card';
-import * as S from '../../styles/globalStyles';
-import * as TYPE from '../../interface/index';
+import React, { memo } from "react";
+import Heading from "../atoms/Heading";
+import Button from "../atoms/Button";
+import Card from "./Card";
+import * as S from "../../styles/globalStyles";
+import * as TYPE from "../../interface/index";
 
-//파스칼 캐이스
 interface likeDataProps {
   handleModal: () => void;
   datas: TYPE.registProps[] | TYPE.itemProps[];
@@ -28,7 +27,7 @@ const Modal = memo(
                 width={100}
                 height={100}
               />
-              {type === 'regist' && (
+              {type === "regist" && (
                 <Button
                   onClick={() => deleteUploadImg(data.id)}
                   name="delete"

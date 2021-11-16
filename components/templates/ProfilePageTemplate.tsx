@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import Button from '../atoms/Button';
-import Modal from '../molecules/Modal';
-import Img from '../atoms/Img';
-import * as API from '../../api/index';
-import * as TYPE from '../../interface/index';
-import * as S from '../../styles/globalStyles';
+import React, { useEffect, useState } from "react";
+import Button from "../atoms/Button";
+import Modal from "../molecules/Modal";
+import Img from "../atoms/Img";
+import * as API from "../../api/index";
+import * as TYPE from "../../interface/index";
+import * as S from "../../styles/globalStyles";
 
 export default function ProfilePageTemplate() {
   const [isModal, setIsModal] = useState<boolean>(false);
@@ -18,9 +18,6 @@ export default function ProfilePageTemplate() {
     return item.image_id;
   });
 
-  // async / await /// Fix => 코드정리
-  // api 관련 처리 모듈화 좋은방법이 아님 반복적으로 써야함
-  // 함수를 나누던 ㅎ하야지  Promise.all처리 다시 생각해보기
   const getLikeData = (idArr: string[]) => {
     const result = Promise.all(
       idArr.map((id: string) => {
@@ -43,7 +40,7 @@ export default function ProfilePageTemplate() {
   //modal click시 피요한 데이터 api요청
   const handleLikeData = () => {
     setIsModal(!isModal);
-    API.getVotes('eric')
+    API.getVotes("eric")
       .then((result) => {
         if (result.status === 200) {
           setLike(result.data);
@@ -54,7 +51,7 @@ export default function ProfilePageTemplate() {
   //즐겨찾기한 목록 가져오기
   const handleEnjoyData = () => {
     setIsVisible(!isVisible);
-    API.getFavourites('test15')
+    API.getFavourites("test15")
       .then((result) => {
         if (result.status === 200) {
           setEnjoy(result.data);
@@ -66,7 +63,7 @@ export default function ProfilePageTemplate() {
   //내가 등록한 목록 가져오기
   const handleRegistData = () => {
     setIsRegist(true);
-    API.getLikedAllImg(10, '1234')
+    API.getLikedAllImg(10, "1234")
       .then((result) => {
         if (result.status === 200) {
           setRegist(result.data);
