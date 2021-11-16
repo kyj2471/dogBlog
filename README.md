@@ -26,19 +26,11 @@
 
 # lighthouse결과
 
-<<<<<<< HEAD
-
 - seo, performance 90점 이상받았습니다.(build시)
 
 # folder structure
 
-- # atomic folder structure
-- seo, performance 90점 이상
-
-# folder structure
-
-- 아토믹 폴더 스트럭쳐
-  > > > > > > > bca239e4c08969fb9894e977648c4dc52e14a5d7
+- atomic folder structure
 
 ## 메인 (검색 & 페이징)
 
