@@ -106,7 +106,7 @@ module.exports = require("redux-saga/effects");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, ["store_store_tsx"], function() { return __webpack_exec__("./pages/_app.tsx"); });
+var __webpack_exports__ = __webpack_require__.X(0, ["api_index_tsx","store_store_tsx"], function() { return __webpack_exec__("./pages/_app.tsx"); });
 module.exports = __webpack_exports__;
 
 })();
