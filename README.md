@@ -26,11 +26,11 @@
 
 # lighthouse결과
 
-- seo, performance 90점 이상
+- seo, performance 90점 이상받았습니다.(build시)
 
 # folder structure
 
-- 아토믹 폴더 스트럭쳐
+- atomic folder structure
 
 ## 메인 (검색 & 페이징)
 
@@ -38,8 +38,8 @@
 
 - 한 페이지에 50개
 - 정렬은 선택가능 하도록 버튼 구성 (desc or asc)
-- 필터링은 Type, bread
-- Infinite Scroll 구성
+- 필터링은 Type, breed로 할 수 있게 되어있습니다.
+- Infinite Scroll 구성(hooks)
 - 상세화면 진입후 뒤로가기로 돌아오면 진입전 스크롤 상태 유지
 - 1열에 5개씩 구성
 - 목록은 이미지와 간단한 정보 한두가지만 노출. 이미지위에 오버레이되면서 즐겨찾기 버튼 노출 (즐겨찾기 된건지 여부 표시)
