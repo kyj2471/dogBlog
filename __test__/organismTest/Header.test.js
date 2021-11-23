@@ -1,43 +1,43 @@
-import React from 'react';
-import Header from '../../components/organisms/Header';
-import { render } from '@testing-library/react';
-import router, { useRouter } from 'next/router';
+import React from "react";
+import Header from "../../components/organisms/Header";
+import { render } from "@testing-library/react";
+import router from "next/router";
 
-jest.mock('next/router', () => require('next-router-mock'));
+jest.mock("next/router", () => require("next-router-mock"));
 
-describe('<HEADER>', () => {
-  it('test header is rendered', () => {
+describe("<HEADER>", () => {
+  it("test header is rendered", () => {
     const { getByText } = render(<Header />);
     expect(getByText(/Profile/i)).toBeInTheDocument();
     expect(getByText(/dog/i)).toBeInTheDocument();
     expect(getByText(/register/i)).toBeInTheDocument();
   });
 
-  it('test routes / is work', () => {
+  it("test routes / is work", () => {
     router.push({
-      pathname: '/'
+      pathname: "/",
     });
     expect(router).toMatchObject({
-      asPath: '/',
-      pathname: '/'
+      asPath: "/",
+      pathname: "/",
     });
   });
-  it('test routes /Profile is work', () => {
+  it("test routes /Profile is work", () => {
     router.push({
-      pathname: '/Profile'
+      pathname: "/Profile",
     });
     expect(router).toMatchObject({
-      asPath: '/Profile',
-      pathname: '/Profile'
+      asPath: "/Profile",
+      pathname: "/Profile",
     });
   });
-  it('test routes /Register is work', () => {
+  it("test routes /Register is work", () => {
     router.push({
-      pathname: '/Register'
+      pathname: "/Register",
     });
     expect(router).toMatchObject({
-      asPath: '/Register',
-      pathname: '/Register'
+      asPath: "/Register",
+      pathname: "/Register",
     });
   });
 });

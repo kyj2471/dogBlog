@@ -45,9 +45,7 @@ export default function MainPageTemplate() {
   );
 
   // sendTypeInput을 활용해 검색 api요청
-  // Fix = > 네이밍
   const searchById = useCallback(() => {
-    // Fix  => 상수 표시 upper case로 변경
     if (sendTypeInput.includes(input)) {
       dispatch(actions.getSearchCard(`${API.queryTypes.mime}${input}`));
     } else {
@@ -63,7 +61,6 @@ export default function MainPageTemplate() {
     dispatch(actions.changeOrder("DESC"));
   }, []);
 
-  // Fix => 함수 네이밍 선언 => handle~ 전달된것 => on~
   return (
     <>
       <Header />

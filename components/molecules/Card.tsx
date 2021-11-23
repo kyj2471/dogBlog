@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
-import Img from '../atoms/Img';
-import Paragraph from '../atoms/Paragraph';
+import React, { memo } from "react";
+import Img from "../atoms/Img";
+import Paragraph from "../atoms/Paragraph";
 
 interface CardProps {
   url: string;
@@ -11,7 +11,13 @@ interface CardProps {
 }
 const Card = memo(({ url, breedGroup, name, width, height }: CardProps) => (
   <>
-    <Img src={url} type="cardImg" alt="test" width={width} height={height} />
+    <Img
+      src={url}
+      type="cardImg"
+      alt="imgDescription"
+      width={width}
+      height={height}
+    />
     {breedGroup && <Paragraph text={`breed:${breedGroup}`} />}
     {name && <Paragraph text={`name:${name}`} />}
   </>
