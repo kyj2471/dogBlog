@@ -1,30 +1,29 @@
-import React, { useCallback, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import SortEngeine from '../organisms/SortEngeine';
-import CardGrid from '../organisms/CardGrid';
-import Header from '../organisms/Header';
-import { useRouter } from 'next/router';
-import useScrollRestoration from '../../hooks/useScrollByPageMove';
-import { useInfinity } from '../../hooks/useInfinity';
-import * as API from '../../api/index';
-import * as actions from '../../store/modules/actions';
-import * as TYPE from '../../interface/index';
+import React, { useCallback, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import SortEngeine from "../organisms/SortEngeine";
+import CardGrid from "../organisms/CardGrid";
+import Header from "../organisms/Header";
+import { useRouter } from "next/router";
+import useScrollRestoration from "../../hooks/useScrollByPageMove";
+import { useInfinity } from "../../hooks/useInfinity";
+import * as API from "../../api/index";
+import * as actions from "../../store/modules/actions";
+import * as TYPE from "../../interface/index";
 
 export default function MainPageTemplate() {
-  const [input, setInput] = useState<string>('');
+  const [input, setInput] = useState<string>("");
   const dispatch = useDispatch();
   const router = useRouter();
   const { value } = useSelector((state: TYPE.stateProps) => state.order);
   const { card } = useSelector((state: TYPE.stateProps) => state.mainPage);
-  const sendTypeInput = ['jpg', 'png', 'gif'];
+  const sendTypeInput = ["jpg", "png", "gif"];
   useScrollRestoration(router);
   //즐겨찾기 등록 api요청
   const handleEnroll = useCallback(async (id: string) => {
-    //반복적인 try, catch 해결해야함(공통처리)
     try {
       const result = await API.sendFavourites({
         image_id: id,
-        sub_id: 'test15'
+        sub_id: "test15",
       });
       if (result.status === 200) return result.data.id;
     } catch (error) {
@@ -58,11 +57,10 @@ export default function MainPageTemplate() {
 
   //redux에서 단순히 query값만 변경 (api요청X)
   const handleOrderAsc = useCallback(() => {
-    dispatch(actions.changeOrder('ASC'));
+    dispatch(actions.changeOrder("ASC"));
   }, []);
-  //redux에서 단순히 query값만 변경 (api요청X)
   const handleOrderDesc = useCallback(() => {
-    dispatch(actions.changeOrder('DESC'));
+    dispatch(actions.changeOrder("DESC"));
   }, []);
 
   // Fix => 함수 네이밍 선언 => handle~ 전달된것 => on~

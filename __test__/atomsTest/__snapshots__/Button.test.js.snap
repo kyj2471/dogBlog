@@ -7,3 +7,11 @@ exports[`<BUTTON> test every button 1`] = `
   text
 </button>
 `;
+
+exports[`<BUTTON> test every single button 1`] = `
+<button
+  class="globalStyles__MainEngineButton-sc-5nguut-0 whdmm"
+>
+  text
+</button>
+`;

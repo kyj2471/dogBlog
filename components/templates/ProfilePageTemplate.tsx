@@ -48,6 +48,7 @@ export default function ProfilePageTemplate() {
       })
       .catch((err) => console.log(err));
   };
+
   //즐겨찾기한 목록 가져오기
   const handleEnjoyData = () => {
     setIsVisible(!isVisible);
