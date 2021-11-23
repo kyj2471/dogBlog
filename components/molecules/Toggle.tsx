@@ -1,6 +1,6 @@
-import React, { memo, useState, useEffect, MouseEvent } from 'react';
-import Img from '../atoms/Img';
-import * as TYPE from '../../interface/index';
+import React, { memo, useState, useEffect, MouseEvent } from "react";
+import Img from "../atoms/Img";
+import * as TYPE from "../../interface/index";
 
 interface ToggleDataProps {
   src1: string;
@@ -19,10 +19,11 @@ const Toggle = memo(
     handleEnroll,
     handleCancel,
     id,
-    likeArr
+    likeArr,
   }: ToggleDataProps) => {
     const [toggle, setToggle] = useState<boolean>(false);
     const [deleteId, setDeleteId] = useState<number>();
+
     useEffect(() => {
       if (id) {
         if (toggle) {
@@ -47,7 +48,7 @@ const Toggle = memo(
           className="hoverImg"
           onClick={handleToggle}
           src={toggle ? src1 : src2}
-          alt="test"
+          alt="imgDescription"
           width={15}
           height={15}
         />

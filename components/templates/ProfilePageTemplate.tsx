@@ -32,7 +32,6 @@ export default function ProfilePageTemplate() {
   //내가 좋아요한 데이터 가져오기
   useEffect(() => {
     getLikeData(findDataId)
-      //반복적인거 제거
       .then((data) => setDatas(data))
       .catch((err) => console.log(err));
   }, [like]);

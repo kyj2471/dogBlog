@@ -12,6 +12,7 @@ interface likeDataProps {
   type: string;
   deleteUploadImg?: any;
 }
+
 const Modal = memo(
   ({ datas, handleModal, title, type, deleteUploadImg }: likeDataProps) => (
     <S.ModalContainer>
