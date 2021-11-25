@@ -53,7 +53,7 @@ export default function MainPageTemplate() {
     }
   }, [input]);
 
-  //redux에서 단순히 query값만 변경 (api요청X)
+  //redux에서 단순히 query값만 변경
   const handleOrderAsc = useCallback(() => {
     dispatch(actions.changeOrder("ASC"));
   }, []);
