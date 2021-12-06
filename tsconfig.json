@@ -20,12 +20,13 @@
     "**/*.ts",
     "**/*.tsx",
     "__test__/atomsTest/Loading.test.js",
-    "public/firebase-messaging-sw.js",
+    "public/firebase-messaging-sw.ts",
     "firebase/firebase.tsx",
     "firebase/firebase-messaging-sw.js",
     "firebase/firebase-messaging-sw.js",
     "data.js",
-    "introduce.js"
+    "introduce.js",
+    "jest.config.js"
   ],
   "exclude": ["node_modules"]
 }
