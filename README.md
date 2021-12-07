@@ -24,6 +24,20 @@
 - Jest & RTL (React Testing Library)
 - Styled Component
 
+# quick start
+
+```sh
+$ npm install
+		or
+$ yarn
+```
+
+```sh
+$ npm run dev
+		or
+$ yarn run dev
+```
+
 # lighthouse결과
 
 - seo, performance 90점 이상받았습니다.(build시)
