@@ -36,7 +36,4 @@ yarn-error.log*
 
 .env
 
-/firebase
-
-
 /server
