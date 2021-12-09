@@ -1,5 +1,9 @@
 # [DOG BLOG]
 
+# start
+```npm i ```
+```npm run dev``` or ```npm start```
+
 # skills
 
 - ESLint & Prettier Recommendation
