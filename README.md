@@ -1,8 +1,12 @@
 # [DOG BLOG]
 
 # start
-```npm i ```
-```npm run dev``` or ```npm start```
+
+우선 `npm i `을 진행하시고난 후
+
+`npm run dev` 또는`npm start`를 해주세요.
+
+현재 파이어베이스 관련 문제는 해결후 업데이트 하겠습니다.
 
 # skills
 
